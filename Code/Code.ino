@@ -36,7 +36,7 @@ void loop() {
   // let's check the tilt sensor
   sensorValue = digitalRead(tiltSensor);
   if (sensorValue == HIGH) {
-    //beging randomization
+    //begin randomization
     rPinLedRandomValue = random(0, 255);
     gPinLedRandomValue = random(0, 255);
     bPinLedRandomValue = random(0, 255);
