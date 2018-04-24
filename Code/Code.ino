@@ -35,8 +35,9 @@ void setup() {
 void loop() {
   // let's check the tilt sensor
   sensorValue = digitalRead(tiltSensor);
+  
   if (sensorValue == HIGH) {
-    //begin randomization
+    //beging randomization
     rPinLedRandomValue = random(0, 255);
     gPinLedRandomValue = random(0, 255);
     bPinLedRandomValue = random(0, 255);
@@ -53,12 +54,13 @@ void loop() {
 }
 
 void turnLedsOff() {
-
-  digitalWrite(rPinLed1, LOW);
-  digitalWrite(gPinLed1, LOW);
-  digitalWrite(bPinLed1, LOW);
-  digitalWrite(rPinLed2, LOW);
-  digitalWrite(gPinLed2, LOW);
-  digitalWrite(bPinLed2, LOW);
+  //FLux RGB Leds are common anode
+  //so HIGH means they are off
+  digitalWrite(rPinLed1, HIGH);
+  digitalWrite(gPinLed1, HIGH);
+  digitalWrite(bPinLed1, HIGH);
+  digitalWrite(rPinLed2, HIGH);
+  digitalWrite(gPinLed2, HIGH);
+  digitalWrite(bPinLed2, HIGH);
 }
 
